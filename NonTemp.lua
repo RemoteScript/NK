@@ -407,7 +407,7 @@ syn.queue_on_teleport([[
  
     repeat task.wait() until not Player.PlayerGui:FindFirstChild("Intro");
  
-    loadstring(game:HttpGet("https://pastebin.com/raw/FaTmzbRJ"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RemoteScript/NK/main/Main.lua"))();
 ]])
 
 task.wait(3);
