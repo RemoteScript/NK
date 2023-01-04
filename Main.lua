@@ -55,8 +55,8 @@ if Settings.NextRegion == nil or Settings.AutoSell == nil then
 Function.OnInvoke = CallBack
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "Outdated",
-Text = "Please get the updated script from the discord or v3rmillion",
+Title = "VALUE ERROR",
+Text = "NEXTREGION OR AUTOSELL NOT SPECIFIED.",
 Icon = "",
 Duration = 10,
 Callback = Function;
@@ -68,8 +68,8 @@ if Settings.LeaveAtRegion == nil then
 Function.OnInvoke = CallBack
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "Outdated",
-Text = "LeaveAtRegion property not specificed, Might be Outdated, Check discord.",
+Title = "VALUE ERROR",
+Text = "LEAVEATREGION NOT SPECIFIED, FULLY GOING TILL DREAMS.",
 Icon = "",
 Duration = 10,
 Callback = Function;
@@ -81,8 +81,8 @@ if Settings.RarityFilter == nil or type(Settings.RarityFilter) ~= "string" then
 Function.OnInvoke = CallBack
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-Title = "Outdated",
-Text = "Please get the updated script from the discord or v3rmillion",
+Title = "DATATYPE ERROR",
+Text = "NO RARITYFILTER SET OR NOT STRING.",
 Icon = "",
 Duration = 10,
 Callback = Function;
@@ -90,8 +90,12 @@ Callback = Function;
 return
 end
 
-if game.Workspace:FindFirstChild("Dungeon") and Settings.NextRegion == true and not game.Workspace:FindFirstChild("Live") then
-    loadstring(game:HttpGet("https://pastebin.com/raw/Tw73r4hP"))();
+if game.Workspace:FindFirstChild("Dungeon") and not game.Workspace:FindFirstChild("Live") then
+    if game.ReplicatedStorage.World.Dungeondata.Location.Value ~= "Temp" then
+    loadstring(game:HttpGet("https://pastebin.com/raw/M9Uiw6v1"))();
+    elseif game.ReplicatedStorage.World.Dungeondata.Location.Value == "Temp" and Settings.TempFarm == true then
+        loadstring(game:HttpGet("https://pastebin.com/raw/ZmN0xZfU"))();
+    end
     return
 end
 
@@ -109,7 +113,7 @@ MT.__namecall = newcclosure(function(self, ...)
         Args[2]["Region"] = Settings.Region;
         Args[2]["Difflevel"] = Settings.Difficulty;
         Args[2]["Payment"] = "None";
-		Args[2]["Special"] = Settings.Special;
+        Args[2]["Special"] = Settings.Special;
     end
 
     return Old(self, unpack(Args))
@@ -124,8 +128,7 @@ syn.queue_on_teleport([[
     repeat task.wait() until not Player.PlayerGui:FindFirstChild("Intro");
 
     task.wait(1);
-
-    loadstring(game:HttpGet("https://pastebin.com/raw/tZiNRMCk"))();
+    loadstring(game:HttpGet("https://pastebin.com/raw/KtkUSTP5"))();
 ]])
 
 if Run.Runsummary.Visible == true then
