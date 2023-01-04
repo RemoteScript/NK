@@ -2,32 +2,30 @@
 
 --[[
 --//Regions:
-"Outerwall"
-"Yaramo"
-"Vertigo"
-"Midnight"
-"Junction"
-"Shallows"
+"Outerwall" , "Yaramo" , "Vertigo" , "Midnight" , "Junction" , "Shallows"
 
 --//Difficulty:
-0 - Very easy
-400 - Very hard (Recommended)
+Very Easy - 0
+Easy - Your current level minus 2
+Normal - Your current level
+Hard - Your Current level plus 2
+Crucible - Your Current level plus 4
+400 - Always Crucible
 
 --//Info
-Can only go if unlocked that region
-Script requires melee weapon equipped
 Execute in lobby and wait 10 seconds
+Left ALT to pause/unpause
 ]]
 
 local Settings = {
-    Region = "Midnight",
-    LeaveAtRegion = nil, -- Replace with nil if wanna complete all regions until Junction
+    Region = "Midnight", -- Dive starting region, specified region need to be unlocked first
+    LeaveAtRegion = "Midnight", -- nil for completing until Dreams, put your desired area if you want to leave at specify area example "Shallows"
     Difficulty = 400,
-    Special = true, -- Crucible
-    NextRegion = true,
+    Special = true, 
+    NextRegion = false, -- Keep it true so you can synced all the items from the dive
     AutoSell = true,
     TempFarm = true, -- Pillar Farm and SYNC farm
-    RarityFilter = "Legendary" -- Examples: "Legendary" Ignores Legendary and above, "Alpha" Ignores Alpha and above. Filters: Legendary, Alpha, Omega, Core
+    RarityFilter = "Alpha" -- Examples: "Pristine" Ignores Pristine and above, "Legendary" Ignores Legendary and above. Filters: Pristine, Experimental, Legendary, Alpha, Omega, Core
 }
 
 --//Services
