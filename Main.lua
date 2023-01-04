@@ -92,9 +92,9 @@ end
 
 if game.Workspace:FindFirstChild("Dungeon") and not game.Workspace:FindFirstChild("Live") then
     if game.ReplicatedStorage.World.Dungeondata.Location.Value ~= "Temp" then
-    loadstring(game:HttpGet("https://pastebin.com/raw/M9Uiw6v1"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RemoteScript/NK/main/NonTemp.lua"))();
     elseif game.ReplicatedStorage.World.Dungeondata.Location.Value == "Temp" and Settings.TempFarm == true then
-        loadstring(game:HttpGet("https://pastebin.com/raw/ZmN0xZfU"))();
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RemoteScript/NK/main/Temp.lua"))();
     end
     return
 end
@@ -128,7 +128,7 @@ syn.queue_on_teleport([[
     repeat task.wait() until not Player.PlayerGui:FindFirstChild("Intro");
 
     task.wait(1);
-    loadstring(game:HttpGet("https://pastebin.com/raw/KtkUSTP5"))();
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RemoteScript/NK/main/BackupConfig.lua"))();
 ]])
 
 if Run.Runsummary.Visible == true then
